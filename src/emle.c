@@ -7,7 +7,6 @@ void checkroots(double *phi, int *p, double *theta, int *q, double *PHI, int *P,
 	if (*p > 0) {
 		ret = archeck(*p,phi);
 		if (!ret) {
-			printf("\nnon-stationary AR part\n");
 			exit(-1);
 		}
 	}
@@ -43,7 +42,6 @@ static int checkroots_cerr(double *phi, int *p, double *theta, int *q, double *P
 		ret = archeck(*p,phi);
 		if (!ret) {
 			out = 10;
-			printf("\nnon-stationary AR part\n");
 			return out;
 		}
 	}
