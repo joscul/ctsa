@@ -75,7 +75,6 @@ int grad_calc2(custom_function *funcpt, double *x, int N, double *dx, double eps
 			return 15;
 		}
 		if (fp != fp) {
-			printf("Program Exiting as the function returns NaN");
 			return 15;
 		}
 		x[j] = temp - stepsize;
@@ -84,7 +83,6 @@ int grad_calc2(custom_function *funcpt, double *x, int N, double *dx, double eps
 			return 15;
 		}
 		if (fm != fm) {
-			printf("Program Exiting as the function returns NaN");
 			return 15;
 		}
 		f[j] = (fp - fm)/ (2 * stepsize);
@@ -121,7 +119,6 @@ int grad_calc(custom_function *funcpt, double *x, int N, double *dx, double eps2
 			return 15;
 		}
 		if (f[i] != f[i]) {
-			printf("Program Exiting as the function returns NaN");
 			free(xi);
 			return 15;
 		}
@@ -588,7 +585,6 @@ int cvsrch(custom_function *funcpt, custom_gradient *funcgrad, double *x, double
 			return 15;
 		}
 		if (*f != *f) {
-			printf("Program Exiting as the function returns NaN");
 			free(rcheck);
 			free(wa);
 			return 15;

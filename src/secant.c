@@ -195,7 +195,6 @@ int bfgs_min_naive(custom_function *funcpt, custom_gradient *funcgrad, double *x
 		rcode = 15;
 	}
 	if (fx != fx) {
-		printf("Program Exiting as the function returns NaN");
 		rcode = 15;
 	}
 	
@@ -280,7 +279,6 @@ int bfgs_min_naive(custom_function *funcpt, custom_gradient *funcgrad, double *x
 			break;
 		}
 		if (fxf != fxf) {
-			printf("Program Exiting as the function returns NaN");
 			rcode = 15;
 			break;
 		}
@@ -464,7 +462,6 @@ int bfgs_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, int
 		rcode = 15;
 	}
 	if (fx != fx) {
-		printf("Program Exiting as the function returns NaN");
 		rcode = 15;
 	}
 
@@ -542,7 +539,6 @@ int bfgs_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, int
 			break;
 		}
 		if (fxf != fxf) {
-			printf("Program Exiting as the function returns NaN");
 			rcode = 15;
 			break;
 		}
@@ -629,7 +625,6 @@ int bfgs_min2(custom_function *funcpt, custom_gradient *funcgrad, double *xi, in
 		rcode = 15;
 	}
 	if (fx != fx) {
-		printf("Program Exiting as the function returns NaN");
 		rcode = 15;
 	}
 
@@ -906,7 +901,6 @@ int bfgs_l_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, i
 		rcode = 15;
 	}
 	if (fx != fx) {
-		printf("Program Exiting as the function returns NaN");
 		rcode = 15;
 	}
 	fo = fx;
