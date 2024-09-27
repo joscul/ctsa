@@ -190,7 +190,6 @@ int cgpr_mt(custom_function *funcpt, custom_gradient *funcgrad, double *xc, int 
 	fxf = FUNCPT_EVAL(funcpt,xi, N);
 
 	if (fxf >= DBL_MAX || fxf <= -DBL_MAX) {
-		printf("Program Exiting as the function value exceeds the maximum double value");
 		rcode = 15;
 	}
 	if (fxf != fxf) {
