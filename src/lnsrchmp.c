@@ -72,7 +72,6 @@ int grad_calc2(custom_function *funcpt, double *x, int N, double *dx, double eps
 		stepsize = x[j] - temp;
 		fp = FUNCPT_EVAL(funcpt,x,N);
 		if (fp >= DBL_MAX || fp <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			return 15;
 		}
 		if (fp != fp) {
@@ -82,7 +81,6 @@ int grad_calc2(custom_function *funcpt, double *x, int N, double *dx, double eps
 		x[j] = temp - stepsize;
 		fm = FUNCPT_EVAL(funcpt,x,N);
 		if (fm >= DBL_MAX || fm <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			return 15;
 		}
 		if (fm != fm) {
@@ -119,7 +117,6 @@ int grad_calc(custom_function *funcpt, double *x, int N, double *dx, double eps2
 		xi[i] += step;
 		f[i] = (FUNCPT_EVAL(funcpt, xi, N) - FUNCPT_EVAL(funcpt, x, N)) / step;
 		if (f[i] >= DBL_MAX || f[i] <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			free(xi);
 			return 15;
 		}
@@ -586,7 +583,6 @@ int cvsrch(custom_function *funcpt, custom_gradient *funcgrad, double *x, double
 
 		*f = FUNCPT_EVAL(funcpt,x, N);
 		if (*f >= DBL_MAX || *f <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			free(rcheck);
 			free(wa);
 			return 15;

@@ -192,7 +192,6 @@ int bfgs_min_naive(custom_function *funcpt, custom_gradient *funcgrad, double *x
 	}
 	fx = FUNCPT_EVAL(funcpt,xi,N);
 	if (fx >= DBL_MAX || fx <= -DBL_MAX) {
-		printf("Program Exiting as the function value exceeds the maximum double value");
 		rcode = 15;
 	}
 	if (fx != fx) {
@@ -277,7 +276,6 @@ int bfgs_min_naive(custom_function *funcpt, custom_gradient *funcgrad, double *x
 		
 		fxf = FUNCPT_EVAL(funcpt,xf,N);
 		if (fxf >= DBL_MAX || fxf <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			rcode = 15;
 			break;
 		}
@@ -463,7 +461,6 @@ int bfgs_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, int
 	}
 	fx = FUNCPT_EVAL(funcpt, xi, N);
 	if (fx >= DBL_MAX || fx <= -DBL_MAX) {
-		printf("Program Exiting as the function value exceeds the maximum double value");
 		rcode = 15;
 	}
 	if (fx != fx) {
@@ -541,7 +538,6 @@ int bfgs_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, int
 
 		fxf = FUNCPT_EVAL(funcpt, xf, N);
 		if (fxf >= DBL_MAX || fxf <= -DBL_MAX) {
-			printf("Program Exiting as the function value exceeds the maximum double value");
 			rcode = 15;
 			break;
 		}
@@ -630,7 +626,6 @@ int bfgs_min2(custom_function *funcpt, custom_gradient *funcgrad, double *xi, in
 	}
 	fx = FUNCPT_EVAL(funcpt, xi, N);
 	if (fx >= DBL_MAX || fx <= -DBL_MAX) {
-		printf("Program Exiting as the function value exceeds the maximum double value");
 		rcode = 15;
 	}
 	if (fx != fx) {
@@ -908,7 +903,6 @@ int bfgs_l_min(custom_function *funcpt, custom_gradient *funcgrad, double *xi, i
 	}
 	fx = FUNCPT_EVAL(funcpt, xi, N);
 	if (fx >= DBL_MAX || fx <= -DBL_MAX) {
-		printf("Program Exiting as the function value exceeds the maximum double value");
 		rcode = 15;
 	}
 	if (fx != fx) {
