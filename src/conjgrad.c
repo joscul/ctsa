@@ -193,7 +193,6 @@ int cgpr_mt(custom_function *funcpt, custom_gradient *funcgrad, double *xc, int 
 		rcode = 15;
 	}
 	if (fxf != fxf) {
-		printf("Program Exiting as the function returns NaN");
 		rcode = 15;
 	}
 
